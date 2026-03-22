@@ -39,7 +39,7 @@ export const meals = [
     id: "lunch",
     title: "Prânz — piept de pui + cartofi fierți",
     items: [
-      "155 g piept de pui la cuptor (crud ~180 g înainte de gătire)",
+      "155 g piept de pui la cuptor (porție cântărită gătită)",
       "300 g cartofi fierți (cântărit gata fierți)",
       "100 g salată / murături / legume crude",
       "Condimente: sare, piper, ierburi (fără sosuri calorice mari)",
@@ -74,8 +74,8 @@ export const meals = [
     title: "După antrenament — ovăz + ½ scoop proteine (ultima masă)",
     items: [
       "70 g ovăz (uscat)",
-      "80 g iaurt proteic",
-      "210 ml lapte proteic (sau lapte + pudră dacă îți place consistența)",
+      "80 g iaurt proteic Milbona (Lidl)",
+      "210 ml lapte proteic Milbona (Lidl) — sau lapte + pudră dacă îți place consistența",
       "½ cupă (scoop) Genius Nutrition ISO Whey X5 — amestecă în lapte rece înainte de a turna peste ovăz",
       "⅕ linguriță semințe chia (sau 1 linguriță împărțită la 5 zile — aici porție zilnică mică)",
       "⅕ banană (felii subțiri)",
@@ -91,10 +91,10 @@ export const shoppingLidl = [
   {
     category: "Proteine & lactate",
     items: [
-      "Lapte proteic / semidegresat — ~1,5 l/săpt (210 ml × 7 zile + marjă)",
-      "Iaurt proteic — ~600 g/săpt (80 g × 7)",
+      "Lapte proteic Milbona (Lidl) — ~1,5 l/săpt (210 ml × 7)",
+      "Iaurt proteic Milbona (Lidl) — ~560 g/săpt (80 g × 7)",
       "Ouă — 21 buc/săpt (3 × 7 omlete)",
-      "Piept de pui — ~2,3–2,5 kg brut/săpt (155 g + 145 g gătit/zi ≈ 300 g gătit; cumpără brut cu ~15% peste)",
+      "Piept de pui — ~2,1–2,3 kg/săpt (total ~300 g gătit/zi la cele două mese cu pui)",
       "Șuncă de pui — ~200 g/săpt (25 g × 7)",
       "Cașcaval afumat / mix light — ~200 g/săpt (20–25 g × 7)",
     ],
@@ -102,8 +102,8 @@ export const shoppingLidl = [
   {
     category: "Carbohidrați & fibre",
     items: [
-      "Cartofi — ~2,2–2,8 kg brut/săpt (o porție 300 g fierți/zi la prânz)",
-      "Paste grâu integral / normale — ~500 g uscat/săpt (65 g × 7)",
+      "Cartofi — ~2,1–2,3 kg/săpt (300 g fierți/zi la prânz; pierdere mică la fiert față de greutatea cumpărată)",
+      "Paste grâu integral / normale — ~450–500 g uscat/săpt (65 g × 7 ≈ 455 g)",
       "Passata / pulpă de roșii — 2–3 borcane sau cutii",
       "Ovăz — ~500 g pachet (70 g × 7 ≈ 490 g)",
       "Lipii integrale — 7 buc (una/zi)",
