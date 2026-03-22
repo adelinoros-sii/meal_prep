@@ -9,8 +9,9 @@ import {
 
 export default function Home() {
   return (
-    <div className="wrap">
-      <header>
+    <div className="app">
+      <header className="hero">
+        <span className="badge">Plan personal</span>
         <h1>Meal prep — plan zilnic</h1>
         <p>
           {profile.weightKg} kg, {profile.age} ani, sală {profile.trainingPerWeek}×/săptămână. Obiectiv:
@@ -30,44 +31,58 @@ export default function Home() {
         </div>
       </div>
 
-      <p className="note" style={{ marginBottom: "1.5rem" }}>
+      <p className="note intro-note">
         <strong>Structură actuală:</strong> fără toast; omletă dimineață; prânz cu cartofi; paste cu pui
         înainte de sală (în locul celei de-a doua mese cu cartofi); ovăz + ½ scoop ISO Whey după
         antrenament. {dailyTotals.note}
       </p>
 
-      <section>
-        <h2>Mese</h2>
-        {meals.map((m) => (
-          <article key={m.id} className="meal">
-            <h3>{m.title}</h3>
-            <ul>
-              {m.items.map((line) => (
-                <li key={line}>{line}</li>
-              ))}
-            </ul>
-            <div className="meta">
-              ≈ {m.kcal} kcal · {m.protein} proteine
-            </div>
-          </article>
-        ))}
+      <section aria-labelledby="meals-heading">
+        <div className="section-head">
+          <h2 id="meals-heading">Mese</h2>
+        </div>
+        <div className="meals">
+          {meals.map((m) => (
+            <article key={m.id} className="meal">
+              <h3>{m.title}</h3>
+              <ul>
+                {m.items.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
+              <div className="meta">
+                <span>
+                  ≈ {m.kcal} kcal · {m.protein} proteine
+                </span>
+              </div>
+            </article>
+          ))}
+        </div>
       </section>
 
-      <section>
-        <h2>Proteine în ovăz</h2>
-        <p className="note">{wheyNote}</p>
-        <p className="note" style={{ marginTop: "0.75rem" }}>
-          <strong>Cartofi & paste:</strong> {carbNotes}
-        </p>
+      <section aria-labelledby="notes-heading">
+        <div className="section-head">
+          <h2 id="notes-heading">Proteine & carbohidrați</h2>
+        </div>
+        <div className="notes-stack">
+          <p className="note">{wheyNote}</p>
+          <p className="note">
+            <strong>Cartofi & paste:</strong> {carbNotes}
+          </p>
+        </div>
       </section>
 
-      <section>
-        <h2>Ajustări</h2>
+      <section aria-labelledby="adjust-heading">
+        <div className="section-head">
+          <h2 id="adjust-heading">Ajustări</h2>
+        </div>
         <p className="note">{profile.note}</p>
       </section>
 
-      <section className="shop">
-        <h2>Listă cumpărături (Lidl + extra)</h2>
+      <section className="shop" aria-labelledby="shop-heading">
+        <div className="section-head">
+          <h2 id="shop-heading">Listă cumpărături (Lidl + extra)</h2>
+        </div>
         {shoppingLidl.map((g) => (
           <div key={g.category} className="group">
             <h3>{g.category}</h3>
@@ -81,7 +96,7 @@ export default function Home() {
       </section>
 
       <footer>
-        Deploy pe Vercel — pagină statică, poți salva pe telefon (Add to Home Screen).
+        Deploy pe Vercel — pagină statică. Pe telefon: Adaugă la ecranul principal pentru acces rapid.
       </footer>
     </div>
   );
