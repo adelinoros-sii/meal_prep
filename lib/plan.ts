@@ -5,8 +5,10 @@ export const profile = {
   age: 27,
   goalKgLoss: 8,
   trainingPerWeek: 4,
+  trainingTime:
+    "Sală după ora 19:00 — o masă densă (paste + pui) înainte de antrenament, ovăz după; nu mai ai nevoie de două porții identice cu cartofi.",
   note:
-    "Țintă: ~0,5–0,7 kg/săptămână (deficit moderat). Dacă energia scade prea mult sau antrenamentul suferă, adaugă +20–30 g cartofi la prânz/cină sau +1 albuș la omletă.",
+    "Țintă: ~0,5–0,7 kg/săptămână (deficit moderat). Dacă energia scade sau antrenamentul suferă: +15 g paste uscat sau +1 albuș la omletă. Dacă ai foame după sală, verifică mai întâi hidratarea.",
 };
 
 /** Jumătate cupă = jumătate din cupa măsură din tub (nu pahar); ~15 g pudră tipic ISO. */
@@ -14,9 +16,9 @@ export const wheyNote =
   "Genius Nutrition ISO Whey X5: jumătate cupă (scoop) — verifică pe etichetă (≈12–15 g proteine per ½ scoop).";
 
 export const dailyTotals = {
-  kcal: "~2060–2140",
+  kcal: "~2050–2150",
   proteinG: "~175–185",
-  note: "Fără gustarea cu toast. Prânz + post-antrenament identice (cartofi în loc de orez).",
+  note: "O singură masă cu cartofi/zi; paste cu pui înainte de sală; ovăz + whey după antrenament (ultima masă).",
 };
 
 export const meals = [
@@ -37,35 +39,39 @@ export const meals = [
     id: "lunch",
     title: "Prânz — piept de pui + cartofi fierți",
     items: [
-      "160 g piept de pui la cuptor (crud cântărit ~185–195 g; după gătire ~160 g)",
-      "300 g cartofi fierți (cântărit gata fierți — echivalent aprox. cu porția ta veche de orez + legume ca carbohidrați)",
+      "155 g piept de pui la cuptor (crud ~180 g înainte de gătire)",
+      "300 g cartofi fierți (cântărit gata fierți)",
       "100 g salată / murături / legume crude",
       "Condimente: sare, piper, ierburi (fără sosuri calorice mari)",
     ],
-    kcal: "~420–450",
-    protein: "~42–46 g",
+    kcal: "~410–440",
+    protein: "~40–44 g",
   },
   {
     id: "prewo",
-    title: "Pre-antrenament",
-    items: ["1× banană medie (≈100–120 g)"],
-    kcal: "~95–105",
-    protein: "~1 g",
+    title: "Înainte de sală (~17:30–18:30) — paste cu pui",
+    items: [
+      "65 g paste uscat (penne / fusilli / spaghetti; cântărit înainte de fierbere)",
+      "145 g piept de pui la cuptor / la tigaie (bucăți mici, condimentat)",
+      "150–200 g sos de roșii (passata / pulpă) + ceapă, usturoi, busuioc",
+      "100 g legume (ardei, ciuperci, spanac) — opțional în aceeași tigaie",
+      "1 linguriță ulei măsline (max.) sau gătire cu spray / tigaie antiaderentă",
+    ],
+    kcal: "~480–520",
+    protein: "~44–48 g",
   },
   {
-    id: "postwo",
-    title: "Post-antrenament — aceeași masă ca la prânz",
+    id: "prewo2",
+    title: "Opțional — doar dacă ultima masă a fost cu >4 h înainte de sală",
     items: [
-      "160 g piept de pui la cuptor",
-      "300 g cartofi fierți",
-      "100 g salată / murături",
+      "½ banană mică sau 1 banană mică (~80–100 g) — cu 45–60 min înainte de antrenament",
     ],
-    kcal: "~420–450",
-    protein: "~42–46 g",
+    kcal: "~50–90",
+    protein: "~0,5 g",
   },
   {
     id: "dinner",
-    title: "Cină — ovăz (ultima masă) + ½ scoop proteine",
+    title: "După antrenament — ovăz + ½ scoop proteine (ultima masă)",
     items: [
       "70 g ovăz (uscat)",
       "80 g iaurt proteic",
@@ -88,7 +94,7 @@ export const shoppingLidl = [
       "Lapte proteic / semidegresat — ~1,5 l/săpt (210 ml × 7 zile + marjă)",
       "Iaurt proteic — ~600 g/săpt (80 g × 7)",
       "Ouă — 21 buc/săpt (3 × 7 omlete)",
-      "Piept de pui — ~2,6–2,8 kg brut/săpt (pentru 2 × ~185 g brut/zi la prânz + post-WO; ajustează după pierdere la gătire)",
+      "Piept de pui — ~2,3–2,5 kg brut/săpt (155 g + 145 g gătit/zi ≈ 300 g gătit; cumpără brut cu ~15% peste)",
       "Șuncă de pui — ~200 g/săpt (25 g × 7)",
       "Cașcaval afumat / mix light — ~200 g/săpt (20–25 g × 7)",
     ],
@@ -96,10 +102,12 @@ export const shoppingLidl = [
   {
     category: "Carbohidrați & fibre",
     items: [
-      "Cartofi — ~4,5–5 kg brut/săpt (pentru 2 × 300 g fierți/zi; coaja pierde apă — ia puțin peste nevoia netă)",
+      "Cartofi — ~2,2–2,8 kg brut/săpt (o porție 300 g fierți/zi la prânz)",
+      "Paste grâu integral / normale — ~500 g uscat/săpt (65 g × 7)",
+      "Passata / pulpă de roșii — 2–3 borcane sau cutii",
       "Ovăz — ~500 g pachet (70 g × 7 ≈ 490 g)",
       "Lipii integrale — 7 buc (una/zi)",
-      "Banane — ~9 buc/săpt (1 întreagă pre-WO + ⅕ × 7 pentru ovăz ≈ 1,4 banane extra → rotunjit 2 pachete mici sau cumpără la kilogram)",
+      "Banane — ~8 buc/săpt (opțional ½ pre-WO + ⅕ în ovăz × 7)",
       "Kiwi — ~2–3 buc/săpt (⅕ kiwi/zi)",
     ],
   },
@@ -114,5 +122,5 @@ export const shoppingLidl = [
   },
 ];
 
-export const potatoRationale =
-  "300 g cartofi fierți aduc aprox. același ordin de mărime de carbohidrați ca 200 g orez gătit cu legume din planul inițial; dacă vrei mai strict, cântărește o săptămână și ajustează ±30 g.";
+export const carbNotes =
+  "Cartofi: o singură porție/zi (300 g fierți) ține carbohidrații din zona veche a prânzului. Paste: 65 g uscat ≈ carbohidrați similari cu o porție medie de orez/paste clasice; dacă folosești paste integrale, poți urca la 70 g uscat. Timing: mănâncă pastele cu 1–1,5 h înainte de sală ca să nu alergi cu stomacul plin.";

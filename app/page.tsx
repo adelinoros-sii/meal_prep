@@ -1,7 +1,7 @@
 import {
+  carbNotes,
   dailyTotals,
   meals,
-  potatoRationale,
   profile,
   shoppingLidl,
   wheyNote,
@@ -15,7 +15,7 @@ export default function Home() {
         <p>
           {profile.weightKg} kg, {profile.age} ani, sală {profile.trainingPerWeek}×/săptămână. Obiectiv:
           ~{profile.goalKgLoss} kg pierdere grăsime, păstrare masă musculară (deficit moderat, proteine
-          sus).
+          sus). {profile.trainingTime}
         </p>
       </header>
 
@@ -31,9 +31,9 @@ export default function Home() {
       </div>
 
       <p className="note" style={{ marginBottom: "1.5rem" }}>
-        <strong>Modificări față de planul inițial:</strong> fără gustare toast; omletă dimineață cu 3 ouă;
-        ovăz seara cu ½ scoop ISO Whey; orez înlocuit cu cartofi fierți la prânz și post-antrenament.{" "}
-        {dailyTotals.note}
+        <strong>Structură actuală:</strong> fără toast; omletă dimineață; prânz cu cartofi; paste cu pui
+        înainte de sală (în locul celei de-a doua mese cu cartofi); ovăz + ½ scoop ISO Whey după
+        antrenament. {dailyTotals.note}
       </p>
 
       <section>
@@ -57,7 +57,7 @@ export default function Home() {
         <h2>Proteine în ovăz</h2>
         <p className="note">{wheyNote}</p>
         <p className="note" style={{ marginTop: "0.75rem" }}>
-          <strong>Cartofi:</strong> {potatoRationale}
+          <strong>Cartofi & paste:</strong> {carbNotes}
         </p>
       </section>
 
